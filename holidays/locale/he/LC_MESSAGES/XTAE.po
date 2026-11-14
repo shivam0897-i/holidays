@@ -1,0 +1,109 @@
+#  holidays
+#  --------
+#  A fast, efficient Python library for generating country, province and state
+#  specific sets of holidays on the fly. It aims to make determining whether a
+#  specific date is a holiday as fast and flexible as possible.
+#
+#  Authors: Vacanza Team and individual contributors (see CONTRIBUTORS file)
+#           dr-prodigy <dr.prodigy.github@gmail.com> (c) 2017-2023
+#           ryanss <ryanssdev@icloud.com> (c) 2014-2017
+#  Website: https://github.com/vacanza/holidays
+#  License: MIT (see LICENSE file)
+#
+# Tel Aviv Stock Exchange (TASE) holidays.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Holidays 0.109\n"
+"Report-Msgid-Bugs-To: l10n@vacanza.dev\n"
+"POT-Creation-Date: 2026-11-14 07:41+0000\n"
+"PO-Revision-Date: 2026-11-14 07:44+0000\n"
+"Last-Translator: Shivam Agarwal <shivamagarwal2211@gmail.com>\n"
+"Language-Team: Holidays Localization Team\n"
+"Language: he\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Lingva 5.0.7\n"
+"X-Source-Language: he\n"
+
+#. %s (observed).
+#, c-format
+msgid "%s (נצפה)"
+msgstr "%s (נצפה)"
+
+#. Purim.
+msgid "פורים"
+msgstr "פורים"
+
+#. Shushan Purim.
+msgid "שושן פורים"
+msgstr "שושן פורים"
+
+#. Pesach Eve.
+msgid "ערב פסח"
+msgstr "ערב פסח"
+
+#. Pesach.
+msgid "פסח"
+msgstr "פסח"
+
+#. Seventh day of Pesach Eve.
+msgid "ערב שביעי של פסח"
+msgstr "ערב שביעי של פסח"
+
+#. Seventh day of Pesach.
+msgid "שביעי של פסח"
+msgstr "שביעי של פסח"
+
+#. Remembrance Day.
+msgid "יום הזיכרון לחללי מערכות ישראל ונפגעי פעולות האיבה"
+msgstr "יום הזיכרון לחללי מערכות ישראל ונפגעי פעולות האיבה"
+
+#. Independence Day.
+msgid "יום העצמאות"
+msgstr "יום העצמאות"
+
+#. Shavuot Eve.
+msgid "ערב שבועות"
+msgstr "ערב שבועות"
+
+#. Shavuot.
+msgid "שבועות"
+msgstr "שבועות"
+
+#. Tisha B'Av.
+msgid "תשעה באב"
+msgstr "תשעה באב"
+
+#. Rosh Hashanah Eve.
+msgid "ערב ראש השנה"
+msgstr "ערב ראש השנה"
+
+#. Rosh Hashanah.
+msgid "ראש השנה"
+msgstr "ראש השנה"
+
+#. Yom Kippur Eve.
+msgid "ערב יום כיפור"
+msgstr "ערב יום כיפור"
+
+#. Yom Kippur.
+msgid "יום כיפור"
+msgstr "יום כיפור"
+
+#. Sukkot Eve.
+msgid "ערב סוכות"
+msgstr "ערב סוכות"
+
+#. Sukkot.
+msgid "סוכות"
+msgstr "סוכות"
+
+#. Simchat Torah Eve.
+msgid "ערב שמחת תורה"
+msgstr "ערב שמחת תורה"
+
+#. Simchat Torah / Shemini Atzeret.
+msgid "שמחת תורה/שמיני עצרת"
+msgstr "שמחת תורה/שמיני עצרת"
