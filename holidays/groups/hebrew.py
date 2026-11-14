@@ -81,7 +81,7 @@ class HebrewCalendarHolidays:
             days_delta,
         )
 
-    def _add_purim(self, name: str, days_delta: int | Iterable[int] = 0) -> set[date]:
+    def _add_purim(self, name: str) -> set[date]:
         """
         Add Purim.
 
@@ -93,7 +93,6 @@ class HebrewCalendarHolidays:
         return self._add_hebrew_calendar_holiday(
             name,
             self._hebrew_calendar.purim_date(self._year),  # type: ignore[arg-type]
-            days_delta,
         )
 
     def _add_rosh_hashanah(self, name: str, days_delta: int | Iterable[int] = 0) -> set[date]:

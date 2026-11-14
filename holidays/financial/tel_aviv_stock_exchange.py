@@ -12,8 +12,8 @@
 
 from datetime import date
 
-from holidays.calendars.gregorian import JAN, FRI, SAT, SUN, _timedelta
-from holidays.groups import HebrewCalendarHolidays
+from holidays.calendars.gregorian import JAN, FEB, OCT, NOV, FRI, SAT, SUN, _timedelta
+from holidays.groups import HebrewCalendarHolidays, StaticHolidays
 from holidays.helpers import tr
 from holidays.observed_holiday_base import (
     FRI_TO_PREV_THU,
@@ -21,19 +21,22 @@ from holidays.observed_holiday_base import (
     MON_TO_NEXT_TUE,
     SAT_TO_NEXT_SUN,
     SAT_TO_PREV_THU,
+    SAT_SUN_TO_PREV_FRI,
     SUN_TO_NEXT_MON,
     THU_TO_PREV_WED,
     ObservedHolidayBase,
 )
 
 
-class TelAvivStockExchange(ObservedHolidayBase, HebrewCalendarHolidays):
+class TelAvivStockExchange(ObservedHolidayBase, HebrewCalendarHolidays, StaticHolidays):
     """Tel Aviv Stock Exchange (TASE) holidays.
 
     References:
         * [TASE Trading and Vacation Schedules](https://web.archive.org/web/20261114073950/https://www.tase.co.il/en/content/knowledge_center/trading_vacation_schedule/)
         * [Vacation Schedule 2022](https://web.archive.org/web/20251117170332/https://content.tase.co.il/media/vyolzrvu/file_0010_vacation_schedule_2022_eng.pdf)
         * [Vacation Schedule 2023](https://web.archive.org/web/20261114073732/https://content.tase.co.il/media/iqcijli2/file_0010_vacation_schedule_2023_eng.pdf)
+        * [Trading on Shushan Purim 2023](https://web.archive.org/web/20260118174913/https://www.tase.co.il/en/content/news-lobby/20230308_pr/)
+        * [Vacation Schedule 2024](https://web.archive.org/web/20251117170328/https://content.tase.co.il/media/33xjyi00/file_0010_vacation_schedule_2024_eng.pdf)
     """
 
     market = "XTAE"
@@ -45,6 +48,7 @@ class TelAvivStockExchange(ObservedHolidayBase, HebrewCalendarHolidays):
 
     def __init__(self, *args, **kwargs):
         HebrewCalendarHolidays.__init__(self)
+        StaticHolidays.__init__(self, TelAvivStockExchangeStaticHolidays)
         super().__init__(*args, **kwargs)
 
     def _add_observed(self, dt, name, rule):
@@ -53,15 +57,43 @@ class TelAvivStockExchange(ObservedHolidayBase, HebrewCalendarHolidays):
             self._add_holiday(name, dt)
 
     def _get_weekend(self, dt: date) -> set[int]:
-        # Trading week changed from Sunday-Thursday to Monday-Friday
-        # on January 5, 2026.
-        return {SAT, SUN} if dt >= date(2026, JAN, 5) else {FRI, SAT}
+        # January 4, 2026 was the first non-trading Sunday.
+        return {SAT, SUN} if dt >= date(2026, JAN, 4) else {FRI, SAT}
+
+    def _populate_common_holidays(self):
+        super()._populate_common_holidays()
+        # Fridays during Chol HaMoed remain shortened trading days.
+        chol_hamoed = {
+            _timedelta(dt, delta)  # type: ignore[arg-type]
+            for dt, days in (
+                (self._hebrew_calendar.passover_date(self._year), 5),
+                (self._hebrew_calendar.sukkot_date(self._year), 6),
+            )
+            for delta in range(1, days + 1)
+        }
+        for dt in tuple(self):
+            if dt.year != self._year:
+                continue
+            if (
+                self._year >= 2026
+                and self._is_sunday(dt)
+                and (friday := self._get_observed_date(dt, SAT_SUN_TO_PREV_FRI)) not in self
+                and friday not in chol_hamoed
+            ):
+                super()._add_observed(
+                    dt,
+                    # Market Holiday.
+                    tr("יום חופשה בבורסה"),
+                    rule=SAT_SUN_TO_PREV_FRI,
+                    force_observed=True,
+                    show_observed_label=False,
+                )
+            if self._is_weekend(dt):
+                self.pop(dt)
 
     def _populate_public_holidays(self):
         # Purim.
         self._add_purim(tr("פורים"))
-        # Shushan Purim.
-        self._add_purim(tr("שושן פורים"), +1)
 
         # Pesach Eve.
         self._add_passover(tr("ערב פסח"), -1)
@@ -120,3 +152,21 @@ class TelAvivStockExchange(ObservedHolidayBase, HebrewCalendarHolidays):
 
 class XTAE(TelAvivStockExchange):
     pass
+
+
+class TelAvivStockExchangeStaticHolidays:
+    """Tel Aviv Stock Exchange special holidays.
+
+    References:
+        * [Municipal elections 2024](https://web.archive.org/web/20250720201133/https://en.globes.co.il/en/article-Mon-TASE-edges-higher-despite-no-rate-cut-1001472244)
+    """
+
+    # Knesset Election Day.
+    knesset_election_day = tr("יום הבחירות לכנסת")
+
+    special_public_holidays = {
+        2022: (NOV, 1, knesset_election_day),
+        # Municipal Election Day.
+        2024: (FEB, 27, tr("יום הבחירות לרשויות המקומיות")),
+        2026: (OCT, 27, knesset_election_day),
+    }

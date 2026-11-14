@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: Holidays 0.109\n"
 "Report-Msgid-Bugs-To: l10n@vacanza.dev\n"
 "POT-Creation-Date: 2026-11-14 07:41+0000\n"
-"PO-Revision-Date: 2026-11-14 07:44+0000\n"
+"PO-Revision-Date: 2026-11-14 21:38+0530\n"
 "Last-Translator: Shivam Agarwal <shivamagarwal2211@gmail.com>\n"
 "Language-Team: Holidays Localization Team\n"
 "Language: en_US\n"
@@ -32,13 +32,13 @@ msgstr ""
 msgid "%s (נצפה)"
 msgstr "%s (observed)"
 
+#. Market Holiday.
+msgid "יום חופשה בבורסה"
+msgstr "Market Holiday"
+
 #. Purim.
 msgid "פורים"
 msgstr "Purim"
-
-#. Shushan Purim.
-msgid "שושן פורים"
-msgstr "Shushan Purim"
 
 #. Pesach Eve.
 msgid "ערב פסח"
@@ -107,3 +107,11 @@ msgstr "Simchat Torah Eve"
 #. Simchat Torah / Shemini Atzeret.
 msgid "שמחת תורה/שמיני עצרת"
 msgstr "Simchat Torah / Shemini Atzeret"
+
+#. Knesset Election Day.
+msgid "יום הבחירות לכנסת"
+msgstr "Knesset Election Day"
+
+#. Municipal Election Day.
+msgid "יום הבחירות לרשויות המקומיות"
+msgstr "Municipal Election Day"

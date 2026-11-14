@@ -17,8 +17,8 @@ msgstr ""
 "Project-Id-Version: Holidays 0.109\n"
 "Report-Msgid-Bugs-To: l10n@vacanza.dev\n"
 "POT-Creation-Date: 2026-11-14 07:41+0000\n"
-"PO-Revision-Date: 2026-11-14 07:44+0000\n"
-"Last-Translator: Shivam Agarwal <shivamagarwal2211@gmail.com>\n"
+"PO-Revision-Date: 2026-11-14 21:38+0530\n"
+"Last-Translator: shivam0897-i <123145276+shivam0897-i@users.noreply.github.com>\n"
 "Language-Team: Holidays Localization Team\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
@@ -30,80 +30,88 @@ msgstr ""
 #. %s (observed).
 #, c-format
 msgid "%s (נצפה)"
-msgstr "%s (נצפה)"
+msgstr ""
+
+#. Market Holiday.
+msgid "יום חופשה בבורסה"
+msgstr ""
 
 #. Purim.
 msgid "פורים"
-msgstr "פורים"
-
-#. Shushan Purim.
-msgid "שושן פורים"
-msgstr "שושן פורים"
+msgstr ""
 
 #. Pesach Eve.
 msgid "ערב פסח"
-msgstr "ערב פסח"
+msgstr ""
 
 #. Pesach.
 msgid "פסח"
-msgstr "פסח"
+msgstr ""
 
 #. Seventh day of Pesach Eve.
 msgid "ערב שביעי של פסח"
-msgstr "ערב שביעי של פסח"
+msgstr ""
 
 #. Seventh day of Pesach.
 msgid "שביעי של פסח"
-msgstr "שביעי של פסח"
+msgstr ""
 
 #. Remembrance Day.
 msgid "יום הזיכרון לחללי מערכות ישראל ונפגעי פעולות האיבה"
-msgstr "יום הזיכרון לחללי מערכות ישראל ונפגעי פעולות האיבה"
+msgstr ""
 
 #. Independence Day.
 msgid "יום העצמאות"
-msgstr "יום העצמאות"
+msgstr ""
 
 #. Shavuot Eve.
 msgid "ערב שבועות"
-msgstr "ערב שבועות"
+msgstr ""
 
 #. Shavuot.
 msgid "שבועות"
-msgstr "שבועות"
+msgstr ""
 
 #. Tisha B'Av.
 msgid "תשעה באב"
-msgstr "תשעה באב"
+msgstr ""
 
 #. Rosh Hashanah Eve.
 msgid "ערב ראש השנה"
-msgstr "ערב ראש השנה"
+msgstr ""
 
 #. Rosh Hashanah.
 msgid "ראש השנה"
-msgstr "ראש השנה"
+msgstr ""
 
 #. Yom Kippur Eve.
 msgid "ערב יום כיפור"
-msgstr "ערב יום כיפור"
+msgstr ""
 
 #. Yom Kippur.
 msgid "יום כיפור"
-msgstr "יום כיפור"
+msgstr ""
 
 #. Sukkot Eve.
 msgid "ערב סוכות"
-msgstr "ערב סוכות"
+msgstr ""
 
 #. Sukkot.
 msgid "סוכות"
-msgstr "סוכות"
+msgstr ""
 
 #. Simchat Torah Eve.
 msgid "ערב שמחת תורה"
-msgstr "ערב שמחת תורה"
+msgstr ""
 
 #. Simchat Torah / Shemini Atzeret.
 msgid "שמחת תורה/שמיני עצרת"
-msgstr "שמחת תורה/שמיני עצרת"
+msgstr ""
+
+#. Knesset Election Day.
+msgid "יום הבחירות לכנסת"
+msgstr ""
+
+#. Municipal Election Day.
+msgid "יום הבחירות לרשויות המקומיות"
+msgstr ""

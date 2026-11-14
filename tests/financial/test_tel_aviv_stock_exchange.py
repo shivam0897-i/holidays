@@ -28,35 +28,17 @@ class TestTelAvivStockExchange(CommonFinancialTests, TestCase):
             "2022-03-17",
             "2023-03-07",
             "2024-03-24",
-            "2025-03-14",
             "2026-03-03",
             "2027-03-23",
-            "2028-03-12",
             "2029-03-01",
-        )
-
-    def test_shushan_purim(self):
-        name = "שושן פורים"
-        self.assertHolidayName(
-            name,
-            "2022-03-18",
-            "2023-03-08",
-            "2024-03-25",
-            "2025-03-15",
-            "2026-03-04",
-            "2027-03-24",
-            "2028-03-13",
-            "2029-03-02",
         )
 
     def test_pesach_eve(self):
         name = "ערב פסח"
         self.assertHolidayName(
             name,
-            "2022-04-15",
             "2023-04-05",
             "2024-04-22",
-            "2025-04-12",
             "2026-04-01",
             "2027-04-21",
             "2028-04-10",
@@ -67,14 +49,12 @@ class TestTelAvivStockExchange(CommonFinancialTests, TestCase):
         name = "פסח"
         self.assertHolidayName(
             name,
-            "2022-04-16",
             "2023-04-06",
             "2024-04-23",
             "2025-04-13",
             "2026-04-02",
             "2027-04-22",
             "2028-04-11",
-            "2029-03-31",
         )
 
     def test_seventh_day_of_pesach_eve(self):
@@ -84,10 +64,8 @@ class TestTelAvivStockExchange(CommonFinancialTests, TestCase):
             "2022-04-21",
             "2023-04-11",
             "2024-04-28",
-            "2025-04-18",
             "2026-04-07",
             "2027-04-27",
-            "2028-04-16",
             "2029-04-05",
         )
 
@@ -95,10 +73,8 @@ class TestTelAvivStockExchange(CommonFinancialTests, TestCase):
         name = "שביעי של פסח"
         self.assertHolidayName(
             name,
-            "2022-04-22",
             "2023-04-12",
             "2024-04-29",
-            "2025-04-19",
             "2026-04-08",
             "2027-04-28",
             "2028-04-17",
@@ -143,14 +119,12 @@ class TestTelAvivStockExchange(CommonFinancialTests, TestCase):
         name = "ערב שבועות"
         self.assertHolidayName(
             name,
-            "2022-06-04",
             "2023-05-25",
             "2024-06-11",
             "2025-06-01",
             "2026-05-21",
             "2027-06-10",
             "2028-05-30",
-            "2029-05-19",
         )
 
     def test_shavuot(self):
@@ -158,13 +132,11 @@ class TestTelAvivStockExchange(CommonFinancialTests, TestCase):
         self.assertHolidayName(
             name,
             "2022-06-05",
-            "2023-05-26",
             "2024-06-12",
             "2025-06-02",
             "2026-05-22",
             "2027-06-11",
             "2028-05-31",
-            "2029-05-20",
         )
 
     def test_tisha_bav(self):
@@ -178,10 +150,7 @@ class TestTelAvivStockExchange(CommonFinancialTests, TestCase):
             "2027-08-12",
             "2028-08-01",
         )
-        obs_dts = (
-            "2022-08-07",
-            "2029-07-22",
-        )
+        obs_dts = ("2022-08-07",)
         self.assertHolidayName(f"{name} (נצפה)", obs_dts)
 
     def test_rosh_hashanah_eve(self):
@@ -189,13 +158,11 @@ class TestTelAvivStockExchange(CommonFinancialTests, TestCase):
         self.assertHolidayName(
             name,
             "2022-09-25",
-            "2023-09-15",
             "2024-10-02",
             "2025-09-22",
             "2026-09-11",
             "2027-10-01",
             "2028-09-20",
-            "2029-09-09",
         )
 
     def test_rosh_hashanah(self):
@@ -204,16 +171,10 @@ class TestTelAvivStockExchange(CommonFinancialTests, TestCase):
             name,
             "2022-09-26",
             "2022-09-27",
-            "2023-09-16",
             "2023-09-17",
             "2024-10-03",
-            "2024-10-04",
             "2025-09-23",
             "2025-09-24",
-            "2026-09-12",
-            "2026-09-13",
-            "2027-10-02",
-            "2027-10-03",
             "2028-09-21",
             "2028-09-22",
             "2029-09-10",
@@ -226,10 +187,7 @@ class TestTelAvivStockExchange(CommonFinancialTests, TestCase):
             name,
             "2022-10-04",
             "2023-09-24",
-            "2024-10-11",
             "2025-10-01",
-            "2026-09-20",
-            "2027-10-10",
             "2028-09-29",
             "2029-09-18",
         )
@@ -240,11 +198,9 @@ class TestTelAvivStockExchange(CommonFinancialTests, TestCase):
             name,
             "2022-10-05",
             "2023-09-25",
-            "2024-10-12",
             "2025-10-02",
             "2026-09-21",
             "2027-10-11",
-            "2028-09-30",
             "2029-09-19",
         )
 
@@ -253,13 +209,11 @@ class TestTelAvivStockExchange(CommonFinancialTests, TestCase):
         self.assertHolidayName(
             name,
             "2022-10-09",
-            "2023-09-29",
             "2024-10-16",
             "2025-10-06",
             "2026-09-25",
             "2027-10-15",
             "2028-10-04",
-            "2029-09-23",
         )
 
     def test_sukkot(self):
@@ -267,11 +221,8 @@ class TestTelAvivStockExchange(CommonFinancialTests, TestCase):
         self.assertHolidayName(
             name,
             "2022-10-10",
-            "2023-09-30",
             "2024-10-17",
             "2025-10-07",
-            "2026-09-26",
-            "2027-10-16",
             "2028-10-05",
             "2029-09-24",
         )
@@ -281,13 +232,11 @@ class TestTelAvivStockExchange(CommonFinancialTests, TestCase):
         self.assertHolidayName(
             name,
             "2022-10-16",
-            "2023-10-06",
             "2024-10-23",
             "2025-10-13",
             "2026-10-02",
             "2027-10-22",
             "2028-10-11",
-            "2029-09-30",
         )
 
     def test_simchat_torah(self):
@@ -295,23 +244,62 @@ class TestTelAvivStockExchange(CommonFinancialTests, TestCase):
         self.assertHolidayName(
             name,
             "2022-10-17",
-            "2023-10-07",
             "2024-10-24",
             "2025-10-14",
-            "2026-10-03",
-            "2027-10-23",
             "2028-10-12",
             "2029-10-01",
         )
 
+    def test_fridays_before_holidays(self):
+        self.assertHolidayName(
+            "יום חופשה בבורסה",
+            "2026-09-18",
+            "2027-10-08",
+            "2028-03-10",
+            "2029-07-20",
+        )
+        self.assertHolidayName("ערב ראש השנה", "2026-09-11", "2027-10-01")
+        self.assertNoHoliday("2026-04-03", "2026-09-04", "2027-10-29", "2028-04-14")
+
+    def test_special_holidays(self):
+        self.assertHolidayName("יום הבחירות לכנסת", "2022-11-01", "2026-10-27")
+        self.assertHolidayName("יום הבחירות לרשויות המקומיות", "2024-02-27")
+        self.assertNoHoliday("2023-10-31", "2024-01-30")
+
+    def test_chol_hamoed_fridays(self):
+        for dt in (
+            "2028-04-14",
+            "2029-09-28",
+            "2031-04-11",
+            "2032-09-24",
+            "2034-04-07",
+            "2036-10-10",
+        ):
+            self.assertTrue(self.holidays.is_working_day(dt), dt)
+
+    def test_working_days(self):
+        self.assertNoHolidayName("שושן פורים")
+        for dt in (
+            "2023-03-08",
+            "2024-03-25",
+            "2026-03-04",
+            "2026-04-03",
+            "2026-04-06",
+            "2026-09-28",
+            "2026-10-01",
+        ):
+            self.assertTrue(self.holidays.is_working_day(dt), dt)
+
+    def test_no_weekend_holidays(self):
+        self.assertFalse(any(self.holidays.is_weekend(dt) for dt in self.holidays))
+
     def test_weekend(self):
-        # Trading week changed from Sunday-Thursday to Monday-Friday
-        # on January 5, 2026.
         for dt in (
             "2025-12-26",  # FRI.
             "2025-12-27",  # SAT.
             "2026-01-02",  # FRI.
             "2026-01-03",  # SAT.
+            "2026-01-04",  # SUN.
             "2026-01-10",  # SAT.
             "2026-01-11",  # SUN.
         ):
@@ -319,16 +307,99 @@ class TestTelAvivStockExchange(CommonFinancialTests, TestCase):
 
         for dt in (
             "2025-12-28",  # SUN.
-            "2026-01-04",  # SUN.
             "2026-01-05",  # MON.
             "2026-01-09",  # FRI.
         ):
             self.assertFalse(self.holidays.is_weekend(dt))
 
+    def test_2022(self):
+        self.assertHolidaysInYear(
+            2022,
+            ("2022-03-17", "פורים"),
+            ("2022-04-21", "ערב שביעי של פסח"),
+            ("2022-05-04", "יום הזיכרון לחללי מערכות ישראל ונפגעי פעולות האיבה (נצפה)"),
+            ("2022-05-05", "יום העצמאות (נצפה)"),
+            ("2022-06-05", "שבועות"),
+            ("2022-08-07", "תשעה באב (נצפה)"),
+            ("2022-09-25", "ערב ראש השנה"),
+            ("2022-09-26", "ראש השנה"),
+            ("2022-09-27", "ראש השנה"),
+            ("2022-10-04", "ערב יום כיפור"),
+            ("2022-10-05", "יום כיפור"),
+            ("2022-10-09", "ערב סוכות"),
+            ("2022-10-10", "סוכות"),
+            ("2022-10-16", "ערב שמחת תורה"),
+            ("2022-10-17", "שמחת תורה/שמיני עצרת"),
+            ("2022-11-01", "יום הבחירות לכנסת"),
+        )
+
+    def test_2024(self):
+        self.assertHolidaysInYear(
+            2024,
+            ("2024-02-27", "יום הבחירות לרשויות המקומיות"),
+            ("2024-03-24", "פורים"),
+            ("2024-04-22", "ערב פסח"),
+            ("2024-04-23", "פסח"),
+            ("2024-04-28", "ערב שביעי של פסח"),
+            ("2024-04-29", "שביעי של פסח"),
+            ("2024-05-13", "יום הזיכרון לחללי מערכות ישראל ונפגעי פעולות האיבה (נצפה)"),
+            ("2024-05-14", "יום העצמאות (נצפה)"),
+            ("2024-06-11", "ערב שבועות"),
+            ("2024-06-12", "שבועות"),
+            ("2024-08-13", "תשעה באב"),
+            ("2024-10-02", "ערב ראש השנה"),
+            ("2024-10-03", "ראש השנה"),
+            ("2024-10-16", "ערב סוכות"),
+            ("2024-10-17", "סוכות"),
+            ("2024-10-23", "ערב שמחת תורה"),
+            ("2024-10-24", "שמחת תורה/שמיני עצרת"),
+        )
+
+    def test_2027(self):
+        self.assertHolidaysInYear(
+            2027,
+            ("2027-03-23", "פורים"),
+            ("2027-04-21", "ערב פסח"),
+            ("2027-04-22", "פסח"),
+            ("2027-04-27", "ערב שביעי של פסח"),
+            ("2027-04-28", "שביעי של פסח"),
+            ("2027-05-11", "יום הזיכרון לחללי מערכות ישראל ונפגעי פעולות האיבה"),
+            ("2027-05-12", "יום העצמאות"),
+            ("2027-06-10", "ערב שבועות"),
+            ("2027-06-11", "שבועות"),
+            ("2027-08-12", "תשעה באב"),
+            ("2027-10-01", "ערב ראש השנה"),
+            ("2027-10-08", "יום חופשה בבורסה"),
+            ("2027-10-11", "יום כיפור"),
+            ("2027-10-15", "ערב סוכות"),
+            ("2027-10-22", "ערב שמחת תורה"),
+        )
+
+    def test_2028(self):
+        self.assertHolidaysInYear(
+            2028,
+            ("2028-03-10", "יום חופשה בבורסה"),
+            ("2028-04-10", "ערב פסח"),
+            ("2028-04-11", "פסח"),
+            ("2028-04-17", "שביעי של פסח"),
+            ("2028-05-01", "יום הזיכרון לחללי מערכות ישראל ונפגעי פעולות האיבה (נצפה)"),
+            ("2028-05-02", "יום העצמאות (נצפה)"),
+            ("2028-05-30", "ערב שבועות"),
+            ("2028-05-31", "שבועות"),
+            ("2028-08-01", "תשעה באב"),
+            ("2028-09-20", "ערב ראש השנה"),
+            ("2028-09-21", "ראש השנה"),
+            ("2028-09-22", "ראש השנה"),
+            ("2028-09-29", "ערב יום כיפור"),
+            ("2028-10-04", "ערב סוכות"),
+            ("2028-10-05", "סוכות"),
+            ("2028-10-11", "ערב שמחת תורה"),
+            ("2028-10-12", "שמחת תורה/שמיני עצרת"),
+        )
+
     def test_l10n_default(self):
         self.assertLocalizedHolidays(
             ("2026-03-03", "פורים"),
-            ("2026-03-04", "שושן פורים"),
             ("2026-04-01", "ערב פסח"),
             ("2026-04-02", "פסח"),
             ("2026-04-07", "ערב שביעי של פסח"),
@@ -339,21 +410,17 @@ class TestTelAvivStockExchange(CommonFinancialTests, TestCase):
             ("2026-05-22", "שבועות"),
             ("2026-07-23", "תשעה באב"),
             ("2026-09-11", "ערב ראש השנה"),
-            ("2026-09-12", "ראש השנה"),
-            ("2026-09-13", "ראש השנה"),
-            ("2026-09-20", "ערב יום כיפור"),
+            ("2026-09-18", "יום חופשה בבורסה"),
             ("2026-09-21", "יום כיפור"),
             ("2026-09-25", "ערב סוכות"),
-            ("2026-09-26", "סוכות"),
             ("2026-10-02", "ערב שמחת תורה"),
-            ("2026-10-03", "שמחת תורה/שמיני עצרת"),
+            ("2026-10-27", "יום הבחירות לכנסת"),
         )
 
     def test_l10n_en_us(self):
         self.assertLocalizedHolidays(
             "en_US",
             ("2026-03-03", "Purim"),
-            ("2026-03-04", "Shushan Purim"),
             ("2026-04-01", "Pesach Eve"),
             ("2026-04-02", "Pesach"),
             ("2026-04-07", "Seventh day of Pesach Eve"),
@@ -364,12 +431,9 @@ class TestTelAvivStockExchange(CommonFinancialTests, TestCase):
             ("2026-05-22", "Shavuot"),
             ("2026-07-23", "Tisha B'Av"),
             ("2026-09-11", "Rosh Hashanah Eve"),
-            ("2026-09-12", "Rosh Hashanah"),
-            ("2026-09-13", "Rosh Hashanah"),
-            ("2026-09-20", "Yom Kippur Eve"),
+            ("2026-09-18", "Market Holiday"),
             ("2026-09-21", "Yom Kippur"),
             ("2026-09-25", "Sukkot Eve"),
-            ("2026-09-26", "Sukkot"),
             ("2026-10-02", "Simchat Torah Eve"),
-            ("2026-10-03", "Simchat Torah / Shemini Atzeret"),
+            ("2026-10-27", "Knesset Election Day"),
         )
